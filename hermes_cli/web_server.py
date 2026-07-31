@@ -5393,6 +5393,7 @@ def _install_memory_provider_external_dependencies(
                 install = _run_setup_command(
                     install_cmd,
                     display=install_cmd,
+                    # TODO: semgrep
                     shell=True,
                     timeout=300,
                 )
