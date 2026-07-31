@@ -1888,7 +1888,7 @@ def _(rid, params: dict) -> dict:
 
         r = subprocess.run(
             # TODO: semgrep
-            cmd, shell=True, capture_output=True, text=True, timeout=30, cwd=os.getcwd(),
+            cmd, shell=False, capture_output=True, text=True, timeout=30, cwd=os.getcwd(),
             # Force UTF-8 + lossy decode so non-UTF-8 child output can't crash
             # the gateway thread on locale-mismatched Windows (#53137).
             encoding="utf-8", errors="replace",
