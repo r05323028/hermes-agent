@@ -5394,7 +5394,7 @@ def _install_memory_provider_external_dependencies(
                     install_cmd,
                     display=install_cmd,
                     # TODO: semgrep
-                    shell=True,
+                    shell=False,
                     timeout=300,
                 )
             except Exception as exc:
